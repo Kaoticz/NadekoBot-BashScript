@@ -2,6 +2,7 @@
 echo ""
 echo "NadekoBot 1.9+"
 echo "Mirai was here."
+echo "Kotz was here too :^)"
 root=$(pwd)
 youtube-dl -U
 
