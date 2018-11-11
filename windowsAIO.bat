@@ -69,7 +69,7 @@ GOTO End
 :autorestart
 TITLE Downloading NadekoBot Auto Run, please wait...
 SET "FILENAME=%~dp0\NadekoAutoRun.bat"
-powershell -Command "Invoke-WebRequest https://github.com/Kaoticz/NadekoBot-BashScript/raw/CLI/NadekoAutoRun.bat -OutFile '%FILENAME%'"
+powershell -Command "Invoke-WebRequest https://raw.githubusercontent.com/Kaoticz/NadekoBot-BashScript/CLI/NadekoAutoRun.bat -OutFile '%FILENAME%'"
 ECHO.
 ECHO Running Nadeko with Auto Restart, you will have to close the session to stop the auto restart.
 timeout /t 15
@@ -200,7 +200,7 @@ CALL NadekoInstaller.bat
 :credentials
 TITLE Downloading NadekoBot credentials.json setup files, please wait...
 SET "FILENAME=%~dp0\NadekoCredentials.bat"
-powershell -Command "Invoke-WebRequest https://github.com/Kaoticz/NadekoBot-BashScript/raw/CLI/NadekoCredentials.bat -OutFile '%FILENAME%'"
+powershell -Command "Invoke-WebRequest https://raw.githubusercontent.com/Kaoticz/NadekoBot-BashScript/CLI/NadekoCredentials.bat -OutFile '%FILENAME%'"
 ECHO NadekoBot credentials.json setup files downloaded.
 timeout /t 5
 CALL NadekoCredentials.bat
@@ -370,7 +370,7 @@ ECHO Downloading 32bit redis-server...
 ECHO Provided by github.com/MaybeGoogle/NadekoFiles
 ECHO.
 SET "FILENAME=%~dp0\redis-server.exe"
-powershell -NoProfile -ExecutionPolicy unrestricted  -Command "Invoke-WebRequest "https://raw.githubusercontent.com/samdivaio/NadekoFiles/master/x86_Prereqs/redis-server.exe" -OutFile '%FILENAME%'"
+powershell -NoProfile -ExecutionPolicy unrestricted  -Command "Invoke-WebRequest "https://github.com/Kaoticz/NadekoBot-BashScript/raw/CLI/NadekoFiles/redis-server.exe" -OutFile '%FILENAME%'"
 
 ECHO redis-server.exe file downloaded.
 ECHO.
