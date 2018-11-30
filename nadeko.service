@@ -1,0 +1,12 @@
+[Unit]
+Description=NadekoBot 
+
+[Service]
+WorkingDirectory=/root
+User=root
+Type=forking
+ExecStart=/usr/bin/tmux new-session -s Nadeko -d '/bin/sh NadekoARN.sh'
+ExecStop=/bin/sleep 2
+
+[Install]
+WantedBy=multi-user.target
